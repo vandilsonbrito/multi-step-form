@@ -1,0 +1,158 @@
+@import './variables';
+@import './formstep2.scss';
+@import './formStep3.scss';
+@import './formStep4.scss';
+@import './formStep5.scss';
+
+
+@mixin flexCenter($justify) {
+    display: flex;
+    justify-content: $justify;
+    align-items: center;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.principal-container {
+    font-family: "Ubuntu", sans-serif;
+    width: 100vw;
+    height: 100vh;
+    background-color: $magnolia;   
+    overflow: hidden;
+    @include flexCenter(center);
+    flex-direction: column;
+    button {
+        &:hover {
+            cursor: pointer;
+        }
+        &:active {
+            transform: scale(.98);
+        }
+    }
+    .container-form-wrapper-desktop {
+        width: 900px;
+        height: 550px;
+        display: flex;
+        padding: 25px;
+        flex-direction: row;
+        background-color: white;
+        border-radius: 15px;
+        position: relative;
+        .container-img-hero-desktop {
+            width: 280px;
+            height: 100%;
+            border-radius: 10px;
+            background-image: url('../assets/images/bg-sidebar-desktop.svg');
+            background-size: cover;
+            padding: 40px 0 0 30px;
+        }
+        .circle-steps-wrapper-desktop {
+            width: max-content;
+            height: 230px;
+            display: flex;
+            justify-content: space-between;
+            align-items: self-start;
+            flex-direction: column;
+            .steps-container {
+                width: fit-content;
+                height: fit-content;
+                @include flexCenter(flex-start);
+                gap: 18px;
+                color: white;
+                text-transform: uppercase;
+            }
+            .circle-steps {
+                width: 35px;
+                height: 35px;
+                background-color: transparent;
+                border: 2px solid white;
+                border-radius: 100%;
+                @include flexCenter(center);
+                
+            }
+            .step-selected {
+                background-color: $light-blue;
+                border: none;
+                color: $marine-blue;
+                font-weight: bold;
+                
+            }
+            .steps-info span {
+                font-size: 0.8rem;
+                color: $light-gray;
+            }
+            .steps-info p {
+                font-size: 1rem;
+                font-weight: 500;
+            }
+        }
+        .form-wrapper-desktop {
+            width: 100%;
+            height: fit-content;
+            .button-wrapper-desktop {
+                width: 54%;
+                height: 60px;
+                @include flexCenter(space-between);
+                gap: 150px;
+                position: absolute;
+                bottom: 40px;
+                margin-left: 52px;
+            }
+            
+        }
+        .form-wrapper {
+            width: 520px;  
+            height: 100%;
+            padding: 38px 0px 0 90px; 
+            position: relative;       
+            h1 {
+                font-size: 1.9rem;
+                color: $marine-blue;
+                font-weight: 700;
+                align-self: self-start;
+
+            }
+            .form-subtitle {
+                font-size: 1.1rem;
+                font-weight: 400;
+                padding: 15px 0 25px;
+                color: $cool-gray;
+                align-self: self-start;
+            }
+            .form-step1 {
+                width: 100%;
+                height: fit-content;
+                display: flex;
+                justify-content: space-between;
+                flex-direction: column;
+                .input-step1 {
+                    width: 100%;
+                    height: 44px;
+                    border: 1px solid $light-gray;
+                    border-radius: 5px;
+                    margin: 5px 0 15px;
+                    padding: 0 7px;
+                }
+                & label {
+                    color: $marine-blue;
+                    font-weight: 500;
+                    font-size: .9rem;
+                }
+        
+            }
+
+        }
+        .error-message {
+            color: red;
+            margin: -11px 0 10px 0;
+            font-size: .94rem;
+        }
+    }  
+}
+
+

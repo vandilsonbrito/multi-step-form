@@ -1,0 +1,96 @@
+@import './variables';
+@import './toggleSwitch.scss';
+
+@mixin flexCenter($justify) {
+  display: flex;
+  justify-content: $justify;
+  align-items: center;
+}
+@mixin justify($justify) {
+  justify-content: $justify;
+}
+
+.plans {
+  width: 100%;
+  height: 100%;
+  @include flexCenter(center);
+  gap: 12px;
+  flex-direction: column;
+  @media (min-width: 1000px) {
+    flex-direction: row;
+  }
+  .plans-wrapper-button {
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    display: flex;
+    @include justify(start);
+    padding: 15px 15px;
+    border: 1px solid $light-gray;
+    border-radius: 10px;
+    gap: 15px;
+    font-family: "Ubuntu", sans-serif;
+    @media (min-width: 1000px) {
+      width: 130px;
+      flex-direction: column;
+      & img {
+        width: 40px;
+      }
+    }
+    .text-plans {
+        @include flexCenter(start);
+        flex-direction: column;
+        gap: 5px;
+        font-size: 1.2rem;
+        font-weight: bold;
+        color: $marine-blue;
+        h5 {
+          text-align: start;
+          align-self: flex-start;
+        }
+        h6 {
+          font-size: 0.9rem;
+          font-weight: 400;
+          color: $cool-gray;
+          align-self: flex-start;
+          text-align: start;
+        }
+        .hidden-discount {
+          display: none;
+        }
+        .reveal-discount {
+          font-size: 0.9rem;
+          font-weight: 400;
+          color: $marine-blue;
+          align-self: self-start;   
+        }
+        
+    }
+  }
+  .selected-plan {
+    border-color: $purplish-blue;
+    background-color: $alabaster;
+  }
+}
+
+.form-step2 {
+  width: 100%;
+  height: 50px;
+  background-color: $magnolia;
+  margin: 25px 0 0 0;
+  padding: 0 25px 0;
+  border-radius: 10px;
+  @include flexCenter(space-evenly);
+  position: relative;
+  &input {
+    display: none;
+  }
+
+  .period-selected {
+      color: $marine-blue;
+      font-weight: 500;
+  }
+  
+
+}
+

@@ -1,0 +1,36 @@
+@import './formStep2.scss';
+@import './variables.scss';
+
+.thanking-wrapper {
+    width: max-content;
+    height: 400px;
+    background-color: white;
+    padding: 25px;
+    border-radius: 13px;
+    @include flexCenter(center);
+    flex-direction: column;
+    & img {
+        width: 60px;
+        height: 60px;
+    }
+    & h1 {
+        margin: 25px 0 15px;
+    }
+    & p {
+        font-size: 1.07rem;
+        color: $cool-gray;
+        line-height: 1.5rem;
+        text-align: center;
+    }
+}
+@media (min-width: 1000px) {
+    .thanking-wrapper {
+        width: 560px;
+        height: 460px;
+        background-color: white;
+        padding: 25px 80px;
+        border-radius: 13px;
+        @include flexCenter(center);
+        flex-direction: column;
+    }
+}

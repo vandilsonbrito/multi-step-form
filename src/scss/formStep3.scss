@@ -1,0 +1,68 @@
+@import './formStep2.scss';
+
+.plans-step3 {
+    width: 100%;
+    height: 100%;
+    @include flexCenter(space-between);
+    flex-direction: column;
+    gap: 10px;
+}
+.plans-wrapper-button-step3{
+    @include flexCenter(space-between);
+    flex-direction: row;
+    width: 100%;
+    height: max-content;
+    padding: 5px 15px;
+    border-radius: 13px;
+    border: 1px solid $marine-blue;
+}
+.text-plans {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+.plans-wrapper {
+    width: max-content;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    & h5 {
+        color: $marine-blue;
+    }
+    & h6 {
+        color: $cool-gray;
+    }
+}
+.checkbox-step3-container {
+    width: max-content;
+    height: 100%;
+    @include flexCenter(center);
+    flex-direction: column;
+}
+.checkbox-step3-container input[type="checkbox"] {
+    width: 25px;
+    height: 25px;
+    align-self: center;
+}
+.plans-amount-period {
+    width: max-content;
+    height: 60px;
+    @include flexCenter(center);
+    flex-direction: column;
+    color: $purplish-blue;
+    font-weight: 500;
+    font-size: 0.8rem;
+    white-space: nowrap;
+}
+
+.selected-plan {
+    border-color: $purplish-blue;
+    background-color: $alabaster;
+  }
+
+@media (min-width: 1000px) {
+    .plans-step3{
+        flex-direction: column;
+    }
+}
