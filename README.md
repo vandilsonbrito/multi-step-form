@@ -1,8 +1,20 @@
-# React + Vite
+# Multi Step Form
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+É um formulário que possui vários passos, com opções diferentes de inputs.
 
-Currently, two official plugins are available:
+<h2>Technologies</h2>
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- React
+- React-Hook-Form
+- Sass
+
+<h2>Acquired Experience</h2>
+
+Pude aprender na prática o pré-processador Sass e a biblioteca react-hook-form, além de praticar gerenciamento de estados com o Context API.
+
+<h2>Exibition</h2>
+
+
+<h2>Demo</h2>
+
+[Formulário](https://multi-step-form-by-vandilson.netlify.app/)
